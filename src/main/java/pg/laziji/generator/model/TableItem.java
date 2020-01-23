@@ -1,8 +1,12 @@
 package pg.laziji.generator.model;
 
+import lombok.Data;
+
 import java.util.HashMap;
 import java.util.Map;
 
+
+@Data
 public class TableItem {
 
     private String tableName;
@@ -21,29 +25,6 @@ public class TableItem {
         this.tableName = tableName;
     }
 
-    public String getTableName() {
-        return tableName;
-    }
-
-    public void setTableName(String tableName) {
-        this.tableName = tableName;
-    }
-
-    public Map<String, String> getDynamicPathVariables() {
-        return dynamicPathVariables;
-    }
-
-    public void setDynamicPathVariables(Map<String, String> dynamicPathVariables) {
-        this.dynamicPathVariables = dynamicPathVariables;
-    }
-
-    public Map<String, Object> getTemplateVariables() {
-        return templateVariables;
-    }
-
-    public void setTemplateVariables(Map<String, Object> templateVariables) {
-        this.templateVariables = templateVariables;
-    }
 
     public static class Builder {
 

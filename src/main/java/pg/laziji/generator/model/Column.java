@@ -1,12 +1,14 @@
 package pg.laziji.generator.model;
 
 
+import lombok.Data;
 import org.apache.commons.lang.WordUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Data
 public class Column {
 
     private static final Map<String, String> typeMap = new HashMap<>();
@@ -41,62 +43,6 @@ public class Column {
     private boolean nullAble;
     private boolean autoIncrement;
 
-
-    public boolean isAutoIncrement() {
-        return autoIncrement;
-    }
-
-    public void setAutoIncrement(boolean autoIncrement) {
-        this.autoIncrement = autoIncrement;
-    }
-
-    public boolean isNullAble() {
-        return nullAble;
-    }
-
-    public void setNullAble(boolean nullAble) {
-        this.nullAble = nullAble;
-    }
-
-    public String getTableName() {
-        return tableName;
-    }
-
-    public void setTableName(String tableName) {
-        this.tableName = tableName;
-    }
-
-    public Integer getColumnSize() {
-        return columnSize;
-    }
-
-    public void setColumnSize(Integer columnSize) {
-        this.columnSize = columnSize;
-    }
-
-    public String getColumnName() {
-        return columnName;
-    }
-
-    public void setColumnName(String columnName) {
-        this.columnName = columnName;
-    }
-
-    public String getDataType() {
-        return dataType;
-    }
-
-    public void setDataType(String dataType) {
-        this.dataType = dataType;
-    }
-
-    public String getColumnComment() {
-        return columnComment;
-    }
-
-    public void setColumnComment(String columnComment) {
-        this.columnComment = columnComment;
-    }
 
     public String getUppercaseAttributeName() {
         if (columnName == null) {
